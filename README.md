@@ -1,7 +1,7 @@
 ## To Create From Scratch
 - `rails new <app name>`
 - `cd <app name>`
-- open `Gemfile` and add `gem "slim"` to the bottom
+- open `Gemfile` and add `gem "slim-rails"` to the bottom
 - `bundle install`
 - `rails g scaffold welcome`
 - `rails db:migrate`
