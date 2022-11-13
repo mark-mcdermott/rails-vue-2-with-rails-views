@@ -1,24 +1,23 @@
-# README
+## To Create From Scratch
+- `rails new <app name>`
+- `cd <app name>`
+- open `Gemfile` and add `gem "slim"` to the bottom of the file
+- `bundle install`
+- `rails g scaffold welcome`
+- `rails db:migrate`
+- `./bin/importmap pin vue@2.7.14`
+- make `app/javascript/application.js` look like this:
+```
+import "@hotwired/turbo-rails"
+import "controllers"
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+import Vue from 'vue'
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+```
+- `rails s`
+- in a browser, go to `localhost:3000/welcomes`
