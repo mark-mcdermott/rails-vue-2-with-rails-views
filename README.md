@@ -6,7 +6,9 @@
 - `rails g scaffold welcome`
 - `rails db:migrate`
 - open `config/importmap.rb` and add this line to the bottom:
-  - `pin "vue", to: "https://ga.jspm.io/npm:vue@2.7.14/dist/vue.esm.browser.min.js"`
+```
+pin "vue", to: "https://ga.jspm.io/npm:vue@2.7.14/dist/vue.esm.browser.min.js"
+```
 - make `app/javascript/application.js` look like this:
 ```
 import "@hotwired/turbo-rails"
@@ -16,11 +18,11 @@ import Vue from 'vue'
 var app = new Vue({
   el: '#app',
   data: {
-    message: 'Hello Vue!'
+    message: 'Hello from Vue (/app/javascript/application.js)!'
   }
 })
 ```
-- make `app/views/welcomes/index.slim.html` look like this:
+- make `app/views/welcomes/index.html.slim` look like this:
 ```
 p style="color: green" = notice
 
