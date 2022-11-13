@@ -20,26 +20,24 @@ var app = new Vue({
   }
 })
 ```
-- make `app/views/welcomes/index.html.erb` look like this:
+- make `app/views/welcomes/index.slim.html` look like this:
 ```
-<p style="color: green"><%= notice %></p>
+p style="color: green" = notice
 
-<h1>Welcomes</h1>
+h1 Welcomes
 
-<div id="app">
-  <p>{{ message }}</p>
-</div>
+#app
+  p
+    | {{ message }}
 
-<div id="welcomes">
-  <% @welcomes.each do |welcome| %>
-    <%= render welcome %>
-    <p>
-      <%= link_to "Show this welcome", welcome %>
-    </p>
-  <% end %>
-</div>
+#welcomes
+  - @welcomes.each do |welcome|
+    == render welcome
+    p
+      = link_to "Show this welcome", welcome
 
-<%= link_to "New welcome", new_welcome_path %>
+= link_to "New welcome", new_welcome_path
+
 ```
 - `rails s`
 - in a browser, go to `localhost:3000/welcomes`
