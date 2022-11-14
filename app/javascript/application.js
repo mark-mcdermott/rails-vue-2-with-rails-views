@@ -6,6 +6,6 @@ import Vue from 'vue'
 var app = new Vue({
   el: '#app',
   data: {
-    message: 'Hello Vue!'
+    message: 'This line is a Vue data variable string (from app/javascript/application.js) outputted in app/views/pages/home.html.slim'
   }
 })

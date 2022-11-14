@@ -4,7 +4,7 @@
 - `bundle install`
 - `rails db:migrate`
 - `rails s`
-- in a browser, go to `localhost:3000/welcomes`
+- in a browser, go to `http://localhost:3000/pages/home`
 
 ## To Create
 - `rails new <app name>`
