@@ -9,9 +9,9 @@
 ## To Create
 - `rails new <app name>`
 - `cd <app name>`
-- open `Gemfile` and add `gem "slim-rails"` to the bottom
+- `bundle add slim-rails`
 - `bundle install`
-- `rails g scaffold welcome`
+- `rails g controller pages home`
 - `rails db:migrate`
 - open `config/importmap.rb` and add this line to the bottom:
 ```
