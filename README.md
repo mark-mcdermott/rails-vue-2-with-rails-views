@@ -26,28 +26,16 @@ import Vue from 'vue'
 var app = new Vue({
   el: '#app',
   data: {
-    message: 'Hello from Vue (/app/javascript/application.js)!'
+    message: 'This line is a Vue data variable string (from app/javascript/application.js) outputted in app/views/pages/home.html.slim'
   }
 })
 ```
 - make `app/views/welcomes/index.html.slim` look like this:
 ```
-p style="color: green" = notice
-
-h1 Welcomes
-
+p Hi from app/views/pages/home.html.slim
 #app
   p
     | {{ message }}
-
-#welcomes
-  - @welcomes.each do |welcome|
-    == render welcome
-    p
-      = link_to "Show this welcome", welcome
-
-= link_to "New welcome", new_welcome_path
-
 ```
 - `rails s`
-- in a browser, go to `localhost:3000/welcomes`
+- in a browser, go to `localhost:3000/pages/home`
