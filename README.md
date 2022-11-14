@@ -12,7 +12,6 @@
 - `bundle add slim-rails`
 - `bundle install`
 - `rails g controller pages home`
-- `rails db:migrate`
 - open `config/importmap.rb` and add this line to the bottom:
 ```
 pin "vue", to: "https://ga.jspm.io/npm:vue@2.7.14/dist/vue.esm.browser.min.js"
