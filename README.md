@@ -1,4 +1,12 @@
-## To Create From Scratch
+## To Run
+- `git clone https://github.com/mark-mcdermott/rails-vue-2-with-rails-views.git`
+- `cd rails-vue-2-with-rails-views`
+- `bundle install`
+- `rails db:migrate`
+- `rails s`
+- in a browser, go to `localhost:3000/welcomes`
+
+## To Create
 - `rails new <app name>`
 - `cd <app name>`
 - open `Gemfile` and add `gem "slim-rails"` to the bottom
